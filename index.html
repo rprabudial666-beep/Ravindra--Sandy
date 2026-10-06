@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ravindra & Sandy</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080808;
+  color: white;
+  font-family: Georgia, "Times New Roman", serif;
+  overflow: hidden;
+}
+
+.screen {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.2s ease;
+  background:
+    radial-gradient(circle at center, #211b16 0%, #090909 65%);
+}
+
+.screen.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.content {
+  max-width: 500px;
+  animation: rise 1.5s ease forwards;
+}
+
+.gold {
+  color: #d4af37;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.small {
+  font-size: 13px;
+  letter-spacing: 4px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: clamp(38px, 12vw, 72px);
+  font-weight: normal;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: clamp(27px, 8vw, 48px);
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+.tap {
+  margin-top: 45px;
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: #d4af37;
+  animation: pulse 2s infinite;
+}
+
+.line {
+  width: 70px;
+  height: 1px;
+  background: #d4af37;
+  margin: 25px auto;
+}
+
+.heart {
+  font-size: 35px;
+  color: #d4af37;
+  margin-bottom: 25px;
+  animation: heartbeat 2s infinite;
+}
+
+.date {
+  font-size: clamp(38px, 11vw, 65px);
+  letter-spacing: 8px;
+  color: #d4af37;
+  margin: 25px 0;
+}
+
+.question {
+  font-size: clamp(34px, 10vw, 60px);
+  color: #d4af37;
+  line-height: 1.2;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: .4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.18);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SCREEN 1 -->
+<section class="screen active" onclick="nextScreen()">
+  <div class="content">
+    <div class="heart">♡</div>
+
+    <div class="gold small">
+      A Love Story
+    </div>
+
+    <h1>Ravindra<br>&<br>Sandy</h1>
+
+    <div class="line"></div>
+
+    <p>
+      Five years.<br>
+      Two souls.<br>
+      One beautiful journey.
+    </p>
+
+    <div class="tap">
+      TAP TO BEGIN
+    </div>
+  </div>
+</section>
+
+
+<!-- SCREEN 2 -->
+<section class="screen" onclick="nextScreen()">
+  <div class="content">
+
+    <div class="gold small">
+      Five Years Ago
+    </div>
+
+    <h2>
+      Two souls<br>
+      found each other.
+    </h2>
+
+    <div class="line"></div>
+
+    <p>
+      Neither of us knew just how
+      beautiful the journey ahead
+      would become.
+    </p>
+
+    <div class="tap">
+      TAP TO CONTINUE
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SCREEN 3 -->
+<section class="screen" onclick="nextScreen()">
+  <div class="content">
+
+    <div class="heart">♡</div>
+
+    <h2>
+      Five years.
+    </h2>
+
+    <p>
+      Countless memories.<br>
+      Endless laughter.<br>
+      A thousand little moments.
+    </p>
+
+    <div class="line"></div>
+
+    <p>
+      And through it all,
+      I'd still choose you.
+    </p>
+
+    <div class="tap">
+      TAP TO CONTINUE
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SCREEN 4 -->
+<section class="screen" onclick="nextScreen()">
+  <div class="content">
+
+    <div class="gold small">
+      Our Story
+    </div>
+
+    <h2>
+      Two souls.<br>
+      Two hearts.<br>
+      One love.
+    </h2>
+
+    <div class="line"></div>
+
+    <p>
+      Two lives became one journey,
+      and that journey brought us
+      exactly where we are today.
+    </p>
+
+    <div class="tap">
+      TAP TO CONTINUE
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SCREEN 5 -->
+<section class="screen" onclick="nextScreen()">
+  <div class="content">
+
+    <div class="gold small">
+      The Next Chapter
+    </div>
+
+    <p>
+      After five beautiful years...
+    </p>
+
+    <h2>
+      I think it's time
+      for our two souls
+      to become one.
+    </h2>
+
+    <div class="tap">
+      TAP TO CONTINUE
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SCREEN 6 -->
+<section class="screen" onclick="nextScreen()">
+  <div class="content">
+
+    <div class="gold small">
+      Save This Date
+    </div>
+
+    <div class="date">
+      24<br>
+      <span style="font-size:25px;">OCTOBER</span><br>
+      2026
+    </div>
+
+    <div class="line"></div>
+
+    <p>
+      A day that will change
+      the rest of our story.
+    </p>
+
+    <div class="tap">
+      TAP TO CONTINUE
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SCREEN 7 -->
+<section class="screen" onclick="nextScreen()">
+  <div class="content">
+
+    <div class="heart">♡</div>
+
+    <div class="gold small">
+      Sandy...
+    </div>
+
+    <p>
+      After five incredible years,
+      there is only one question
+      left to ask.
+    </p>
+
+    <div class="tap">
+      TAP TO CONTINUE
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SCREEN 8 -->
+<section class="screen" onclick="nextScreen()">
+  <div class="content">
+
+    <div class="question">
+      Will you<br>
+      marry me?
+    </div>
+
+    <div class="line"></div>
+
+    <p>
+      Forever starts with you.
+    </p>
+
+    <div class="heart">♡</div>
+
+  </div>
+</section>
+
+
+<!-- SCREEN 9 -->
+<section class="screen">
+  <div class="content">
+
+    <div class="gold small">
+      Forever
+    </div>
+
+    <h1>
+      Ravindra<br>
+      <span style="color:#d4af37;">&</span><br>
+      Sandy
+    </h1>
+
+    <div class="line"></div>
+
+    <p>
+      Two souls.<br>
+      One heart.<br>
+      One forever.
+    </p>
+
+    <div class="date" style="font-size:25px;">
+      24 • 10 • 2026
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+
+let currentScreen = 0;
+
+const screens = document.querySelectorAll(".screen");
+
+function nextScreen() {
+
+  if (currentScreen < screens.length - 1) {
+
+    screens[currentScreen].classList.remove("active");
+
+    currentScreen++;
+
+    screens[currentScreen].classList.add("active");
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
